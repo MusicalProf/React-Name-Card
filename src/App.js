@@ -10,29 +10,32 @@ function App() {
       <Card>
         <Background />
         <PersonalDetails>
+          <Image />
           <h1>Ra'mar K. Leach</h1>
           <H3>Chicago, IL</H3>
         </PersonalDetails>
-        <Image />
         <hr />
         <Numbers>
           <Followers>
-            <A href="https://www.linkedin.com/in/musicalprof/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/musicalprof/"
+              target="_blank"
+            >
               <LinkedIn></LinkedIn>
               <P1>LinkedIn</P1>
-            </A>
+            </Link>
           </Followers>
           <Likes>
-            <A href="https://github.com/MusicalProf" target="_blank">
+            <Link href="https://github.com/MusicalProf" target="_blank">
               <GitHub></GitHub>
               <P2>GitHub</P2>
-            </A>
+            </Link>
           </Likes>
           <Photos>
-            <A href="https://soundcloud.com/musicalprof" target="_blank">
+            <Link href="https://soundcloud.com/musicalprof" target="_blank">
               <Music></Music>
               <P3>Music</P3>
-            </A>
+            </Link>
           </Photos>
         </Numbers>
       </Card>
@@ -64,32 +67,33 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: aquamarine;
+  background-color: whitesmoke;
   height: 450px;
   width: 450px;
   border-radius: 15px;
   box-shadow: 4px 3px 5px 1px black;
   display: flex;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
 `;
 
 const Background = styled.div`
   background-image: url("https://removal.ai/wp-content/uploads/2021/05/image7.png");
   background-size: cover;
-  height: 38%;
+  height: 150px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   text-align: center;
 `;
 
 const PersonalDetails = styled.div`
-  background-color: white;
+  background-color: whitesmoke;
   text-align: center;
-  height: 38%;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
 `;
 
@@ -101,21 +105,21 @@ const Image = styled.div`
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  margin-top: 75px;
-  position: absolute;
-  left: 38%;
+  margin-top: -75px;
+  /* position: absolute; */
+  /* left: 38%; */
 `;
 
 const Numbers = styled.div`
-  background-color: white;
+  background-color: ;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  height: 38%;
+  height: 150px;
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 `;
 
 const H3 = styled.h2`
@@ -131,17 +135,18 @@ export const LinkedIn = styled(LinkedinIn)`
   font-size: 50px;
   height: 50px;
   width: 50px;
+  }
 `;
 
 export const GitHub = styled(Github)`
-  color: #000;
+  color: #100c08;
   font-size: 50px;
   height: 50px;
   width: 50px;
 `;
 
 export const Music = styled(Soundcloud)`
-  color: rgb(237, 97, 43);
+  color: rgba(237, 97, 43);
   font-size: 50px;
   height: 50px;
   width: 50px;
@@ -151,14 +156,30 @@ const P1 = styled.h3`
   color: rgba(42, 102, 188);
 `;
 const P2 = styled.h3`
-  color: #000;
+  color: #100c08;
 `;
 const P3 = styled.h3`
-  color: rgb(237, 97, 43);
+  color: rgba(237, 97, 43);
 `;
 
-const A = styled.a`
+const Link = styled.a`
   text-decoration: none;
+  display: inline-block;
+  box-shadow: 4px 3px 5px 1px black;
+  border-radius: 8px;
+  &:link {
+    /* background-color: blue; */
+  }
+  &:hover {
+    background-color: #2f4f4f;
+  }
+  &:active {
+    box-shadow: none;
+    font-style: italic;
+  }
+  &:visited {
+    font-style: italic;
+  }
 `;
 // Finish -
 // Bonus - Button to change the background color.
