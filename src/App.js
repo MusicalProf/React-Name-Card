@@ -167,8 +167,10 @@ const Link = styled.a`
   display: inline-block;
   box-shadow: 4px 3px 5px 1px black;
   border-radius: 8px;
+  height: 75px;
+  width: 75px;
+  padding: 5px;
   &:link {
-    /* background-color: blue; */
   }
   &:hover {
     background-color: #2f4f4f;
